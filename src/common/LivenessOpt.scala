@@ -83,4 +83,9 @@ trait DefUseAnalysis extends NestedBlockTraversal {
     }
   }
 
+  override def reset = {
+    defUseMap = null
+    super.reset
+  }
+
 }

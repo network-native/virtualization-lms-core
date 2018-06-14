@@ -610,6 +610,7 @@ trait Effects extends Expressions with Blocks with Utils {
   // --- bookkeping
 
   override def reset = {
+    conditionalScope = false
     shallowAliasCache.clear()
     deepAliasCache.clear()
     allAliasCache.clear()

@@ -201,6 +201,12 @@ trait StructExp extends StructOps with StructTags with BaseExp with EffectExp wi
     encounteredStructs += name -> elems.map(e => (e._1, e._2.tp))
   }
   val encounteredStructs = new scala.collection.mutable.HashMap[String, Seq[(String, Typ[_])]]
+
+  override def reset = {
+    encounteredStructs.clear()
+    super.reset
+  }
+
 }
 
 trait StructExpOpt extends StructExp {

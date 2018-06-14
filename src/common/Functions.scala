@@ -222,6 +222,11 @@ trait FunctionsRecursiveExp extends FunctionsExp with ClosureCompare {
     }
   }
 
+  override def reset = {
+    funTable = Nil
+    super.reset
+  }
+
 }
 
 trait TupledFunctionsRecursiveExp extends FunctionsRecursiveExp with TupledFunctionsExp

@@ -170,4 +170,9 @@ trait WorklistTransformer extends ForwardTransformer { // need backward version,
       }
   }
 
+  override def reset = {
+    curSubst = Map.empty
+    nextSubst = Map.empty
+    super.reset
+  }
 }
